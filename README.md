@@ -1,6 +1,6 @@
 # Aile ✈️
 
-**Aile** is an open-source, offline-first flight tracking application built exclusively for Android. Inspired by the premium experience of *Flighty* (iOS), Aile aims to bring a beautifully designed, "Material 3 Expressive" flight tracker to the Android ecosystem.
+**Aile** is an open-source, offline-first flight tracking application built exclusively for Android. Inspired by the premium experience of top-tier flight trackers, Aile aims to bring a beautifully designed, "Material 3 Expressive" flight tracker to the Android ecosystem.
 
 ## 🎯 Goals
 - **Android Exclusive**: Leverage the best of Android UI/UX with Material 3.
