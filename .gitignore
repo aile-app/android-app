@@ -54,7 +54,6 @@ gradle/wrapper/dists/
 *.apk
 *.aab
 *.apks
-*.jar
 *.class
 *.dex
 *.o
@@ -94,6 +93,12 @@ out/
 !.idea/migrations.xml
 !.idea/runConfigurations.xml
 !.idea/vcs.xml
+
+# Gradle wrapper files (these SHOULD be committed)
+!gradle/wrapper/gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.properties
+!gradlew
+!gradlew.bat
 
 # NOTE: app/build/ should be in .gitignore if you want it excluded
 # The following are intentionally kept in the repo for project sharing:
