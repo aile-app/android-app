@@ -1,6 +1,6 @@
 # Gradle
 .gradle
-/build
+/build/
 /local.properties
 gradle.properties
 
@@ -8,34 +8,17 @@ gradle.properties
 gradle/wrapper/dists/
 
 # IntelliJ / Android Studio
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
-/.idea/navHistory.xml
-/.idea/navNext.xml
-/.idea/navStructure.xml
-/.idea/runHistory.xml
-/.idea/shelf.xml
-/.idea/usage.statistics.xml
-/.idea/assetRoot.xml
-/.idea/compiler.xml
-/.idea/deploymentTargetSelector.xml
-/.idea/gradle.xml
-/.idea/misc.xml
-/.idea/migrations.xml
-/.idea/runConfigurations.xml
-/.idea/uiInspection.xml
-/.idea/dictionary.cmap
-/.idea/vcs.xml
-/.idea/jsLibraryMappings.xml
-/.idea/xcf.xml
-/.idea/inspectionProfiles/Project_Default.xml
-/.idea/inspectionProfiles/Inspector.xml
-/.idea/.name
-/.idea/.gitignore
+.idea/
+# Except for these specific files we want to share
+!.idea/.gitignore
+!.idea/.name
+!.idea/AndroidProjectSystem.xml
+!.idea/compiler.xml
+!.idea/gradle.xml
+!.idea/markdown.xml
+!.idea/migrations.xml
+!.idea/runConfigurations.xml
+!.idea/vcs.xml
 
 # VS Code
 .vscode/
@@ -54,6 +37,7 @@ gradle/wrapper/dists/
 *.apk
 *.aab
 *.apks
+*.jar
 *.class
 *.dex
 *.o
@@ -81,18 +65,7 @@ proguard.map
 apt/
 generated/
 out/
-
-# Project-specific files to keep in repo (shared IDE config)
-!.idea/.gitignore
-!.idea/.name
-!.idea/AndroidProjectSystem.xml
-!.idea/compiler.xml
-!.idea/deploymentTargetSelector.xml
-!.idea/gradle.xml
-!.idea/markdown.xml
-!.idea/migrations.xml
-!.idea/runConfigurations.xml
-!.idea/vcs.xml
+app/build/
 
 # Gradle wrapper files (these SHOULD be committed)
 !gradle/wrapper/gradle-wrapper.jar
@@ -100,7 +73,15 @@ out/
 !gradlew
 !gradlew.bat
 
-# NOTE: app/build/ should be in .gitignore if you want it excluded
-# The following are intentionally kept in the repo for project sharing:
-# - .idea/ files listed above - shared project configuration
+# NOTE: app/build/ is ignored by the /build/ pattern above
+# The following .idea/ files are intentionally kept in repo for project sharing:
+# - .idea/.gitignore
+# - .idea/.name
+# - .idea/AndroidProjectSystem.xml
+# - .idea/compiler.xml
+# - .idea/gradle.xml
+# - .idea/markdown.xml
+# - .idea/migrations.xml
+# - .idea/runConfigurations.xml
+# - .idea/vcs.xml
 # - These should be the ONLY .idea/ files committed
