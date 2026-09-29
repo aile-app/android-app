@@ -1,5 +1,6 @@
 package com.aile.android.di
 
+import com.aile.android.data.remote.AirLabsApi
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import dagger.Module
@@ -25,10 +26,15 @@ object AppModule {
     @Provides
     @Singleton
     fun provideRetrofit(moshi: Moshi): Retrofit {
-        // Base URL will be configured later for AirLabs
         return Retrofit.Builder()
-            .baseUrl("https://airlabs.co/api/v9/") 
+            .baseUrl("https://airlabs.co/api/v9/")
             .addConverterFactory(MoshiConverterFactory.create(moshi))
             .build()
+    }
+
+    @Provides
+    @Singleton
+    fun provideAirLabsApi(retrofit: Retrofit): AirLabsApi {
+        return retrofit.create(AirLabsApi::class.java)
     }
 }

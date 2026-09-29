@@ -1,15 +1,101 @@
-*.iml
+# Gradle
 .gradle
+/build
 /local.properties
+gradle.properties
+
+# Gradle wrapper distributions (should not be committed - large binary files)
+gradle/wrapper/dists/
+
+# IntelliJ / Android Studio
 /.idea/caches
 /.idea/libraries
 /.idea/modules.xml
 /.idea/workspace.xml
 /.idea/navEditor.xml
 /.idea/assetWizardSettings.xml
+/.idea/navHistory.xml
+/.idea/navNext.xml
+/.idea/navStructure.xml
+/.idea/runHistory.xml
+/.idea/shelf.xml
+/.idea/usage.statistics.xml
+/.idea/assetRoot.xml
+/.idea/compiler.xml
+/.idea/deploymentTargetSelector.xml
+/.idea/gradle.xml
+/.idea/misc.xml
+/.idea/migrations.xml
+/.idea/runConfigurations.xml
+/.idea/uiInspection.xml
+/.idea/dictionary.cmap
+/.idea/vcs.xml
+/.idea/jsLibraryMappings.xml
+/.idea/xcf.xml
+/.idea/inspectionProfiles/Project_Default.xml
+/.idea/inspectionProfiles/Inspector.xml
+/.idea/.name
+/.idea/.gitignore
+
+# VS Code
+.vscode/
+
+# Kotlin
+*.iml
+
+# OS
 .DS_Store
-/build
-/captures
-.externalNativeBuild
+.DS_Store?
+
+# Local configuration
+/.claude/settings.local.json
+
+# Build artifacts
+*.apk
+*.aab
+*.apks
+*.jar
+*.class
+*.dex
+*.o
+*.so
+
+# Native libraries
+/.externalNativeBuild
 .cxx
-local.properties
+
+# Keystore files
+*.jks
+*.keystore
+*.p12
+
+# ProGuard
+proguard.map
+
+# Test reports
+/reports
+/build/reports
+/build/test-results
+
+# Generated files
+/generated
+apt/
+generated/
+out/
+
+# Project-specific files to keep in repo (shared IDE config)
+!.idea/.gitignore
+!.idea/.name
+!.idea/AndroidProjectSystem.xml
+!.idea/compiler.xml
+!.idea/deploymentTargetSelector.xml
+!.idea/gradle.xml
+!.idea/markdown.xml
+!.idea/migrations.xml
+!.idea/runConfigurations.xml
+!.idea/vcs.xml
+
+# NOTE: app/build/ should be in .gitignore if you want it excluded
+# The following are intentionally kept in the repo for project sharing:
+# - .idea/ files listed above - shared project configuration
+# - These should be the ONLY .idea/ files committed

@@ -21,7 +21,7 @@
 ## 🚀 Getting Started
 
 ### Prerequisites
-- Android Studio Iguana or later (to support latest Compose features).
+- Android Studio Koala or later (for latest Compose and Gradle features).
 - JDK 17+.
 
 ### Setup
@@ -30,22 +30,28 @@
    git clone https://github.com/aile-app/android-app.git
    ```
 2. **Open in Android Studio**.
-3. **API Keys**:
+3. **Initialize Gradle wrapper** (required for fresh checkout):
+   ```bash
+   ./gradlew wrapper
+   ```
+4. **API Keys**:
    - The app uses [AirLabs](https://airlabs.co/) for flight data.
-   - *Note: Instructions for adding your API key will be added in Phase 2.*
+   - Sign up at https://airlabs.co/ to get a free API key
+   - For development, a demo key is used (limited functionality)
 
 ## 🗺️ Roadmap
 
-### Phase 1: Foundation (Current) ✅
+### Phase 1: Foundation ✅
 - [x] Project Setup (Compose, Hilt, Gradle KTS)
 - [x] Material 3 Expressive Theme configuration
 - [x] Architecture scaffolding
 
-### Phase 2: Core Features (In Progress) 🚧
-- [ ] Room Database implementation
-- [ ] Flight Search & Input UI
-- [ ] AirLabs API Integration (Live Data)
-- [ ] Offline Caching logic
+### Phase 2: Core Features 🚧
+- [x] Room Database implementation (FlightEntity, AirportEntity, AirlineEntity + DAOs)
+- [x] Flight Search & Input UI (FlightSearchScreen + ViewModel)
+- [x] AirLabs API Integration (Flight status search via Retrofit)
+- [ ] Offline Caching logic (merge API results into Room)
+- [ ] Proper API key configuration (local.properties / BuildConfig)
 
 ### Phase 3: Polish ✨
 - [ ] Advanced Material 3 Animations

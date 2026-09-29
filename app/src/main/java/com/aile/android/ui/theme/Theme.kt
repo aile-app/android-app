@@ -37,7 +37,6 @@ private val LightColorScheme = lightColorScheme(
     */
 )
 
-@OptIn(androidx.compose.material3.ExperimentalMaterial3ExpressiveApi::class)
 @Composable
 fun AileTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),

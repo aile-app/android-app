@@ -13,6 +13,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.hilt.navigation.compose.hiltViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -38,6 +39,20 @@ fun FlightSearchScreen(
                 label = { Text("Flight Number (e.g. AA123)") },
                 modifier = Modifier.fillMaxWidth()
             )
+            if (uiState.isLoading) {
+                Text("Searching...")
+            }
+            uiState.airLabsResult?.let { flight ->
+                Text(
+                    text = "Found: ${flight.flightNumber} from ${flight.depIata} to ${flight.arrIata}"
+                )
+            }
         }
     }
+}
+
+@Preview(showSystemUi = true)
+@Composable
+fun FlightSearchScreenPreview() {
+    FlightSearchScreen()
 }
